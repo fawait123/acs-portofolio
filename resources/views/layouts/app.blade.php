@@ -85,7 +85,7 @@
                                         <button data-bs-toggle="modal" data-bs-target="#exampleModal"><i
                                                 class="flaticon-loupe"></i></button>
                                     </li>
-                                    <li><a href="contact.html">try for free</a></li>
+                                    <li><a href="contact.html">Login</a></li>
                                 </ul>
                             </div>
                         </nav>
