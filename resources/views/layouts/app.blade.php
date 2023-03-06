@@ -76,38 +76,7 @@
                             </a>
                             <div class="header-menu position-static">
                                 <ul class="menu">
-                                    <li class="active">
-                                        <a href="#!">home</a>
-                                        <ul>
-                                            <li class="active"><a href="index.html">home 1</a></li>
-                                            <li><a href="index2.html">home 2</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="about.html">about</a></li>
-                                    <li>
-                                        <a href="#!">pages</a>
-                                        <ul>
-                                            <li><a href="about.html">about</a></li>
-                                            <li><a href="service.html">service</a></li>
-                                            <li><a href="service-detail.html">service details</a></li>
-                                            <li><a href="team.html">team</a></li>
-                                            <li><a href="team-detail.html">team details</a></li>
-                                            <li><a href="pricing.html">pricing</a></li>
-                                            <li><a href="project-detail.html">project details</a></li>
-                                            <li><a href="blog.html">blog</a></li>
-                                            <li><a href="blog-detail.html">blog details</a></li>
-                                            <li><a href="contact.html">contact</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="pricing.html">pricing</a></li>
-                                    <li>
-                                        <a href="#!">blog</a>
-                                        <ul>
-                                            <li><a href="blog.html">blog</a></li>
-                                            <li><a href="blog-detail.html">blog details</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="contact.html">contact</a></li>
+                                    @include('layouts.navigation')
                                 </ul>
                             </div>
                             <div class="right-part">
@@ -224,10 +193,7 @@
                                 </div>
                                 <div class="col-lg-6 col-md-6">
                                     <ul class="d-flex justify-content-end">
-                                        <li><a href="index.html">home</a></li>
-                                        <li><a href="about.html">about</a></li>
-                                        <li><a href="service.html">service</a></li>
-                                        <li><a href="contact.html">contact</a></li>
+                                        @include('layouts.navigation')
                                     </ul>
                                 </div>
                             </div>
