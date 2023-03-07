@@ -71,8 +71,8 @@ Developer: Najmul Huda Eimon
 :root {
     --light-orange: #30b1cf;
     --deep-orange: #38a3c9;
-    --gradient: linear-gradient(to bottom, #38a3c9, #30b1cf);
-    --gradienta: linear-gradient(to bottom, #30b1cf, #38a3c9);
+    --gradient: linear-gradient(to bottom, #38a3c9, #712c91);
+    --gradienta: linear-gradient(to bottom, #712c91, #38a3c9);
     --dark: #061738;
     --grey: #606060;
     --white: #fff;
