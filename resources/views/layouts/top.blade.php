@@ -1,5 +1,5 @@
     <!-- start banner area -->
-    <section class="inner-page banner" data-img="assets/images/inner/banner-bg.jpg">
+    <section class="inner-page banner" data-img="{{ asset('assets/bg.png') }}">
         <div class="overlay">
             <div class="container">
                 <div class="row">

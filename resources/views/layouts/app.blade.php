@@ -65,7 +65,8 @@
     <!-- start header area -->
     <header>
         <!-- start menubar area -->
-        <section class="menubar">
+        <section class="menubar"
+            style="background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(56,163,201,0.9810049019607843) 47%, rgba(113,44,145,1) 100%);">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
