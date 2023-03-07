@@ -15,7 +15,7 @@
     <!-- heebo font -->
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
-    <title>ACS | Agile Code Studio</title>
+    <title>ACS | Agile Code Studio.</title>
 
     <!-- font-awesome -->
     <link rel="stylesheet" href="{{ asset('assets') }}/css/all.min.css">
