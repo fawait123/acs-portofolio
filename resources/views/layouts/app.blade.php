@@ -72,7 +72,7 @@
                     <div class="col-lg-12">
                         <nav class="navbar p-0">
                             <!-- header logo -->
-                            <a class="navbar-brand p-0" href="index.html">
+                            <a class="navbar-brand p-0" href="{{ route('welcome') }}">
                                 <img src="{{ asset('assets/logo.png') }}" style="width: 80px" alt="Logo" />
                             </a>
                             <div class="header-menu position-static">
@@ -86,7 +86,7 @@
                                         <button data-bs-toggle="modal" data-bs-target="#exampleModal"><i
                                                 class="flaticon-loupe"></i></button>
                                     </li>
-                                    <li><a href="contact.html">Login</a></li>
+                                    <li><a href="{{ route('canvas.login') }}">Login</a></li>
                                 </ul>
                             </div>
                         </nav>

@@ -8,6 +8,7 @@ Route::get('/', [WelcomeController::class,'index'])->name('welcome');
 Route::get('about',[WelcomeController::class,'about'])->name('about');
 Route::get('contact',[WelcomeController::class,'contact'])->name('contact');
 Route::get('posts',[WelcomeController::class,'blog'])->name('blog');
+Route::get('post/{id}',[WelcomeController::class,'blogSingle'])->name('blog.single');
 
 
 // canvas
