@@ -20,13 +20,13 @@
                             <div class="col-lg-4 col-md-6">
                                 <div class="single-blog wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
                                     <div class="image">
-                                        <a href="blog-detail.html">
+                                        <a href="{{ route('blog.single', $post->id) }}">
                                             <img src="{{ asset($post->featured_image) }}" alt="Blog">
                                         </a>
                                     </div>
                                     <div class="content">
 
-                                        <a href="blog-detail.html">
+                                        <a href="{{ route('blog.single', $post->id) }}">
                                             <h6>{{ $post->title }}</h6>
                                         </a>
                                         <ul class="d-flex align-item-center">
