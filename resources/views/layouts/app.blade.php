@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    @stack('customhtml')
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -11,7 +12,6 @@
     <!-- josefin sans font -->
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
-
     <!-- heebo font -->
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
@@ -271,6 +271,8 @@
 
     <!-- script -->
     <script src="{{ asset('assets') }}/js/script.js"></script>
+
+    @stack('customjs')
 </body>
 
 </html>

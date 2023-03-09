@@ -252,3 +252,7 @@
     </section>
     <!-- end blog area -->
 @endsection
+
+@push('customhtml')
+    <meta name="{{ $post->meta['title'] ?? '' }}" content="{{ $post->meta['description'] ?? '' }}">
+@endpush

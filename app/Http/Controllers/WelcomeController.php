@@ -9,13 +9,15 @@ class WelcomeController extends Controller
 {
     public function index()
     {
-        return view('welcome');
+        $posts = Post::latest()->with('user', 'topic')->take(3)->get();
+        return view('welcome',compact('posts'));
     }
 
 
     public function about()
     {
-        return view('about');
+        $posts = Post::latest()->with('user', 'topic')->take(3)->get();
+        return view('about',compact('posts'));
     }
 
 

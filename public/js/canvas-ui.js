@@ -2887,6 +2887,11 @@ var render = function render() {
   }, [_vm._v("Your profile")]), _vm._v(" "), _c("a", {
     staticClass: "dropdown-item",
     attrs: {
+      href: "/".concat(_vm.canvasPath, "/teams")
+    }
+  }, [_vm._v("Teams")]), _vm._v(" "), _c("a", {
+    staticClass: "dropdown-item",
+    attrs: {
       href: "/".concat(_vm.canvasPath, "/posts")
     }
   }, [_vm._v("Posts")]), _vm._v(" "), _vm.isAdmin ? _c("a", {
@@ -3823,6 +3828,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ([{
   path: '/',
   name: 'posts',
+  component: _views_AllPosts__WEBPACK_IMPORTED_MODULE_0__["default"]
+}, {
+  path: '/',
+  name: 'teams',
   component: _views_AllPosts__WEBPACK_IMPORTED_MODULE_0__["default"]
 }, {
   path: '/posts/:slug',
