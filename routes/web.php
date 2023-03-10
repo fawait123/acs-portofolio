@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WelcomeController;
+use App\Http\Controllers\HomeController;
 
 
 Route::get('/', [WelcomeController::class,'index'])->name('welcome');
@@ -9,6 +10,12 @@ Route::get('about',[WelcomeController::class,'about'])->name('about');
 Route::get('contact',[WelcomeController::class,'contact'])->name('contact');
 Route::get('posts',[WelcomeController::class,'blog'])->name('blog');
 Route::get('post/{id}',[WelcomeController::class,'blogSingle'])->name('blog.single');
+
+
+
+
+// home route
+Route::get('home',[HomeController::class,'index']);
 
 
 // canvas
