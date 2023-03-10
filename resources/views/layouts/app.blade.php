@@ -86,7 +86,11 @@
                                         <button data-bs-toggle="modal" data-bs-target="#exampleModal"><i
                                                 class="flaticon-loupe"></i></button>
                                     </li>
-                                    <li><a href="{{ route('canvas.login') }}">Login</a></li>
+                                    @if (auth('canvas')->user())
+                                        <li><a href="{{ route('canvas') }}">Home</a></li>
+                                    @else
+                                        <li><a href="{{ route('canvas.login') }}">Login</a></li>
+                                    @endif
                                 </ul>
                             </div>
                         </nav>
