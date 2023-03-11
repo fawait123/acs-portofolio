@@ -36,7 +36,7 @@ class WelcomeController extends Controller
 
     public function blogSingle($id)
     {
-        $post = Post::with('user', 'tags', 'topic')->find($id);
+        $post = Post::with('user', 'tags', 'topic','comments')->find($id);
         if($post){
             return view('single_blog',compact('post'));
         }
