@@ -119,11 +119,14 @@
                             <ul class="address">
                                 <li class="d-flex align-items-center">
                                     <i class="fas fa-map-marker-alt"></i>
-                                    <p>24/A New California</p>
+                                    <p>Jl.Raya Bantul, No 211, Pendowoharjo, Bantul, Yogykarta</p>
                                 </li>
                                 <li class="d-flex align-items-center">
                                     <i class="fas fa-phone-alt"></i>
-                                    <p>+1 800 123 4567</p>
+                                    <div>
+                                        <p>+62 877-7544-4470</p>
+                                        <p>+62 823-3616-0182</p>
+                                    </div>
                                 </li>
                                 <li class="d-flex align-items-center">
                                     <i class="far fa-envelope"></i>

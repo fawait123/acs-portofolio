@@ -42,8 +42,8 @@
                                 </div>
                                 <div class="text">
                                     <h5>Address</h5>
-                                    <p>1650 Lombard Street,</p>
-                                    <p>San Francisco, CA 94123</p>
+                                    <p>Jl.Raya Bantul, No.211,</p>
+                                    <p>Pendowoharjo, Bantul, Yogyakarta</p>
                                 </div>
                             </li>
                             <li class="d-flex">
@@ -52,8 +52,8 @@
                                 </div>
                                 <div class="text">
                                     <h5>phone</h5>
-                                    <p>+1 (415) 876-3250</p>
-                                    <p>+1 (415) 876-3251</p>
+                                    <p>+62 823-3616-0182</p>
+                                    <p>+62 877-7544-4470</p>
                                 </div>
                             </li>
                             <li class="d-flex">

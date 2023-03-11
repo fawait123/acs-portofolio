@@ -50,7 +50,7 @@
                                             <div class="right-part">
                                                 <a href="#!" class="d-flex align-items-center">
                                                     <i class="flaticon-chat"></i>
-                                                    <p>comments (03)</p>
+                                                    <p>comments ({{ count($post->comments) }})</p>
                                                 </a>
                                             </div>
                                         </div>
@@ -61,84 +61,56 @@
                                                 <h4>recent comments</h4>
                                             </div>
                                             <ul class="all-comment">
-                                                <li class="wow fadeInUp" data-wow-delay="0.3s" data-wow-duration="1s">
-                                                    <img src="assets/images/blog/comment1.jpg" alt="Comment Author">
-                                                    <div class="comment-body">
-                                                        <a href="#!" class="reply d-flex align-items-center"><i
-                                                                class="fas fa-reply-all"></i>
-                                                            <p>reply</p>
-                                                        </a>
-                                                        <a href="#!">
-                                                            <h6>Richard Smith</h6>
-                                                        </a>
-                                                        <a href="#!">
-                                                            <p class="time">September 19, 2021</p>
-                                                        </a>
-                                                        <p>Perspiciatis unde omnis iste natus error sit voluptatem accusant
-                                                            laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
-                                                            veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-                                                            Nemo enim ipsam voluptatem quia</p>
-                                                    </div>
-                                                    <ul class="all-comment">
-                                                        <li>
-                                                            <img src="assets/images/blog/comment2.jpg" alt="Comment Author">
+                                                @if (count($post->comments) > 0)
+                                                    @foreach ($post->comments as $item)
+                                                        <li class="wow fadeInUp" data-wow-delay="0.3s"
+                                                            data-wow-duration="1s">
+                                                            <img src="{{ asset('assets') }}/images/blog/comment3.jpg"
+                                                                alt="Comment Author">
                                                             <div class="comment-body">
                                                                 <a href="#!" class="reply d-flex align-items-center"><i
                                                                         class="fas fa-reply-all"></i>
                                                                     <p>reply</p>
                                                                 </a>
                                                                 <a href="#!">
-                                                                    <h6>Laura Johnson</h6>
+                                                                    <h6>{{ $item->name }}</h6>
                                                                 </a>
                                                                 <a href="#!">
-                                                                    <p class="time">September 19, 2021</p>
+                                                                    <p class="time">
+                                                                        {{ date('M d', strtotime($item->date)) . ', ' . date('Y', strtotime($item->date)) }}
+                                                                    </p>
                                                                 </a>
-                                                                <p>Perspiciatis unde omnis iste natus error sit voluptatem
-                                                                    accusant laudei, totam rem aperiam, eaque ipsa quae ab
-                                                                    illo inventore veritatis et quasi architecto beatae
-                                                                    vitae dicta </p>
+                                                                <p>{{ $item->body }}</p>
                                                             </div>
                                                         </li>
-                                                    </ul>
-                                                </li>
-                                                <li class="wow fadeInUp" data-wow-delay="0.3s" data-wow-duration="1s">
-                                                    <img src="assets/images/blog/comment3.jpg" alt="Comment Author">
-                                                    <div class="comment-body">
-                                                        <a href="#!" class="reply d-flex align-items-center"><i
-                                                                class="fas fa-reply-all"></i>
-                                                            <p>reply</p>
-                                                        </a>
-                                                        <a href="#!">
-                                                            <h6>Richard Doe</h6>
-                                                        </a>
-                                                        <a href="#!">
-                                                            <p class="time">September 19, 2021</p>
-                                                        </a>
-                                                        <p>Perspiciatis unde omnis iste natus error sit voluptatem accusant
-                                                            laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
-                                                            veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-                                                            Nemo enim ipsam voluptatem quia</p>
-                                                    </div>
-                                                </li>
+                                                    @endforeach
+                                                @else
+                                                    <li class="wow fadeInUp" data-wow-delay="0.3s" data-wow-duration="1s">
+                                                        <h3>No commnet in this post</h3>
+                                                    </li>
+                                                @endif
                                             </ul>
-                                            <div class="title leave wow fadeInUp">
+                                            <div class="title leave wow fadeInUp" id="comments">
                                                 <h4>Leave a comment</h4>
                                             </div>
-                                            <form action="#!">
+                                            <form action="{{ route('comment.store') }}" method="post">
+                                                @csrf
                                                 <div class="row">
+                                                    <input type="hidden" name="post_id" value="{{ $post->id }}">
                                                     <div class="col-lg-6 col-md-6">
-                                                        <input type="text" placeholder="name*" required
-                                                            class="input-field">
+                                                        <input type="text" name="name" placeholder="name*" required
+                                                            class="input-field has-error">
+                                                        <div class="invalid-feedback">err</div>
                                                     </div>
                                                     <div class="col-lg-6 col-md-6">
-                                                        <input type="email" placeholder="email*" required
+                                                        <input type="email" name="email" placeholder="email*" required
                                                             class="input-field">
                                                     </div>
                                                     <div class="col-lg-12">
-                                                        <textarea placeholder="your comments*" required class="input-field"></textarea>
+                                                        <textarea placeholder="your comments*" name="body" required class="input-field"></textarea>
                                                     </div>
                                                     <div class="col-lg-12">
-                                                        <button type="submit" class="button-style1">post comment <span
+                                                        <button type="submit" class="button-style1">post comment<span
                                                                 class="btn-dot"></span></button>
                                                     </div>
                                                 </div>
@@ -183,7 +155,8 @@
                                         <li class="item d-flex align-items-center">
                                             <div class="image">
                                                 <a href="#!">
-                                                    <img src="assets/images/blog/img1.jpg" alt="Application" />
+                                                    <img src="{{ asset('assets') }}/images/blog/img1.jpg"
+                                                        alt="Application" />
                                                 </a>
                                             </div>
                                             <div class="item-body">
@@ -196,7 +169,8 @@
                                         <li class="item d-flex align-items-center">
                                             <div class="image">
                                                 <a href="#!">
-                                                    <img src="assets/images/blog/img2.jpg" alt="Application" />
+                                                    <img src="{{ asset('assets') }}/images/blog/img2.jpg"
+                                                        alt="Application" />
                                                 </a>
                                             </div>
                                             <div class="item-body">
@@ -209,7 +183,8 @@
                                         <li class="item d-flex align-items-center">
                                             <div class="image">
                                                 <a href="#!">
-                                                    <img src="assets/images/blog/img3.jpg" alt="Application" />
+                                                    <img src="{{ asset('assets') }}/images/blog/img3.jpg"
+                                                        alt="Application" />
                                                 </a>
                                             </div>
                                             <div class="item-body">
